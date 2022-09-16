@@ -1,0 +1,175 @@
+html {
+  min-height: 100vh;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+}
+body {
+  min-height: 100vh;
+  padding: 64px 100px;
+  background-color: lightgray;
+}
+form {
+  display: block;
+}
+main {
+  border-radius: 8px;
+  background-color: white;
+}
+main .card {
+  min-height: 200px;
+  padding: 24px;
+}
+main .card .upper {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: whitesmoke;
+}
+main .card .upper h2.question {
+  font-weight: normal;
+  position: relative;
+}
+main .card .upper h2.question span.number {
+  position: absolute;
+  left: 12px;
+}
+main .card .upper h2.question span.text {
+  display: inline-block;
+  text-indent: 64px;
+}
+main .card .lower {
+  padding-left: 66px;
+}
+main .card .lower ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+main .card .lower label {
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: inline-block;
+}
+main .card .lower label:hover {
+  background-color: lightcyan;
+}
+main .card .lower input[type="radio"],
+main .card .lower input[type="checkbox"] {
+  margin: 0;
+  margin-right: 16px;
+}
+main .controls {
+  height: 120px;
+  padding: 0 72px;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: lightcyan;
+}
+main .controls input[type="submit"] {
+  width: 400px;
+  padding: 8px;
+  margin-right: 48px;
+  border-radius: 6px;
+  background-color: palegreen;
+  cursor: pointer;
+}
+main .controls input[type="submit"]:hover {
+  box-shadow: 0 0 10px gray;
+}
+main .controls input[type="button"] {
+  width: 150px;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: indianred;
+  cursor: pointer;
+}
+main .controls input[type="button"]:hover {
+  box-shadow: 0 0 10px gray;
+}
+.timer {
+  width: 164px;
+  height: 164px;
+  border: 3px solid green;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -98px;
+  left: -82px;
+  font-size: 20px;
+  background-color: palegreen;
+}
+.timer span.whole {
+  position: absolute;
+  top: 31px;
+  right: 15px;
+}
+/* FROM NORMALIZE 8.0.1
+ 1. Add the correct box sizing in Firefox.
+ 2. Show the overflow in Edge and IE.
+*/
+hr {
+  margin: 24px;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+.modal-darkscreen {
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-darkscreen span.exit {
+  position: absolute;
+  top: -16px;
+  right: 8px;
+  font-size: 80px;
+  transform: rotate(45deg);
+}
+.modal-darkscreen span.exit::selection {
+  background-color: transparent;
+}
+.modal-darkscreen span.exit:hover {
+  cursor: pointer;
+  text-shadow: 0 0 8px white;
+}
+.modal-darkscreen .modal-window {
+  width: 512px;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: white;
+}
+.modal-darkscreen .modal-window.alert-box .message,
+.modal-darkscreen .modal-window.confirm-box .message {
+  margin-bottom: 24px;
+}
+.modal-darkscreen .modal-window.alert-box .controls,
+.modal-darkscreen .modal-window.confirm-box .controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.modal-darkscreen .modal-window.alert-box .controls input[type="button"],
+.modal-darkscreen .modal-window.confirm-box .controls input[type="button"] {
+  width: 100px;
+  margin-right: 38px;
+  padding: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.modal-darkscreen .modal-window.alert-box .controls input[type="button"]:hover,
+.modal-darkscreen .modal-window.confirm-box .controls input[type="button"]:hover {
+  box-shadow: 0 0 10px gray;
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+        <link rel="stylesheet" href="{% static 'CSS/leaderboard.css' %}" />
+    {% endblock style %}
+{% block title %}Рейтинг{% endblock title %}
+  {% block content %}
+    <main>
+        <table>
+            <!-- <caption>Рейтинг участников</caption> -->
+            <tr>
+                <th>Позиция</th>
+                <th>Имя</th>
+                <th>Набрано баллов</th>
+                <th>Время</th>
+                <th>Дата</th>
+            </tr>
+            {% for user in leaderboard_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.score }}</td>
+                <td>{{ user.time }}</td>
+                <td>{{ user.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="links">
+            <a href="{% url 'homepage' %}">Перейти на Главную</a>
+        </div>
+    </main>
+{% endblock content %}

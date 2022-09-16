@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+        <link rel="stylesheet" href="{% static 'CSS/results.css' %}" />
+    {% endblock style %}
+{% block title %}Результат{% endblock title %}
+  {% block content %}
+    <main>
+        <div class="upper">
+            <span class="score-string"><b>{{ user.name }}</b>, Вы набрали <span class="score">
+                {% if user.score == 1 %}
+                    {{ user.score }} балл
+                {% elif user.score > 1 and user.score < 5 %}
+                    {{ user.score }} балла
+                {% else %}
+                    {{ user.score }} балла
+                {% endif %}
+            </span> из 15</span>
+            <br>
+            <span class="time-string">Время прохождения: <span class="time"><b>{{ user.time }}</b></span></span>
+        </div>
+        <div class="links">
+            <a href="{% url 'homepage' %}">Перейти на Главную</a> или <a href="{% url 'leaderboard' %}">Перейти к Рейтингам</a>
+        </div>
+    </main>
+{% endblock content %}

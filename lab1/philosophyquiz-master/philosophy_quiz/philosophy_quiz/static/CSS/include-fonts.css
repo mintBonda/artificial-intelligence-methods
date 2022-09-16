@@ -1,0 +1,10 @@
+@font-face
+{
+    font-family: starbound;
+    src: url(starbound.ttf) format("truetype");
+}
+@font-face
+{
+    font-family: vt323;
+    src: url(vt323.ttf) format("truetype");
+}

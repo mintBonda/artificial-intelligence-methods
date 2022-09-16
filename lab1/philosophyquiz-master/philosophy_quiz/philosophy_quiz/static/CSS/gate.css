@@ -1,0 +1,38 @@
+html {
+  min-height: 100vh;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+}
+body {
+  min-height: 100vh;
+  padding: 64px 100px;
+  background-color: lightgray;
+}
+form {
+  display: block;
+}
+main {
+  padding: 32px;
+  border-radius: 8px;
+  background-color: white;
+}
+main label {
+  font-size: 1.5rem;
+  display: block;
+}
+main label:hover {
+  cursor: text;
+}
+main label input[type="text"] {
+  padding-left: 10px;
+}
+main input[type="submit"] {
+  padding: 8px;
+  border-radius: 6px;
+  display: block;
+  background-color: palegreen;
+  cursor: pointer;
+}
+main input[type="submit"]:hover {
+  box-shadow: 0 0 10px gray;
+}

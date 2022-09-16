@@ -1,0 +1,35 @@
+html {
+  min-height: 100vh;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+}
+body {
+  min-height: 100vh;
+  padding: 64px 100px;
+  background-color: lightgray;
+}
+main {
+  border-radius: 8px;
+  background-color: white;
+}
+main .upper {
+  padding: 32px;
+  margin-bottom: 32px;
+}
+main .upper span.score-string {
+  font-size: 1.5rem;
+}
+main .upper span.score-string span.score {
+  font-weight: bold;
+}
+main .upper span.time-string {
+  font-size: 1.5rem;
+}
+main .links {
+  padding: 32px;
+  border-radius: 0 0 8px 8px;
+  background-color: lightcyan;
+}
+main .links a:visited {
+  color: blue;
+}

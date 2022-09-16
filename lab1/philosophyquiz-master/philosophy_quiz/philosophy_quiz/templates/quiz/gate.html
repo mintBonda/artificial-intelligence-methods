@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'CSS/gate.css' %}"/>
+    {% endblock style %}
+{% block title %}Викторина по философии{% endblock title %}
+  {% block content %}
+    <main>
+        <form action="{% url 'start_quiz'%}"  method="post" name="start_quiz">
+        {% csrf_token %}
+            <label>Представьтесь: <input type="text" name="name" autofocus required></label>
+            <ul>
+                <li>Викторина состоит из 15 вопросов</li>
+                <li>На выполнение даётся 15 минут</li>
+            </ul>
+            <input type="submit" value="Начать тест">
+        </form>
+    </main>
+{% endblock content %}

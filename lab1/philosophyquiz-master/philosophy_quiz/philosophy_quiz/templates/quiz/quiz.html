@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+        <link rel="stylesheet" href="{% static 'CSS/quiz.css' %}" />
+    {% endblock style %}
+{% block title %}Викторина по философии{% endblock title %}
+  {% block content %}
+    <div class="timer"><span class="whole"><span class="minutes">00</span>:<span class="seconds">00</span></span></div>
+    <div class="modal-darkscreen" hidden>
+        <div class="modal-window plain-text" hidden>
+            <div class="message"></div>
+        </div>
+        <div class="modal-window alert-box" hidden>
+            <div class="message"></div>
+            <div class="controls">
+                <input type="button" value="Ок">
+            </div>
+        </div>
+        <div class="modal-window confirm-box" hidden>
+            <div class="message"></div>
+            <div class="controls">
+                <input type="button" value="Да">
+                <input type="button" value="Нет">
+            </div>
+        </div>
+        <!-- <span class="exit">+</span> -->
+    </div>
+    <main>
+        <form name="main-form" action="{% url 'add_result' %}" method="post" name="quiz">
+            {% csrf_token %}
+            <input type="hidden" name="name" value="{{ user }}">
+            <input hidden type="text"  name="time" value="00:00">
+            {% for question in question_list %}
+            <div class="card">
+                <div class="upper">
+                    <h2 class="question">
+                        <span class="number">{{ forloop.counter }}</span>
+                        <span class="text">{{ question.title }}</span>
+                    </h2>
+                </div>
+                <div class="lower">
+                    <ul>
+                        {% for answer in question.answers %}
+                            <li><label><input type="radio" name="q{{ question.id }}" id="q{{ question.id }}"
+                            value="{{ answer.id }}">{{ answer.text }}</label></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
+            <div class="controls">
+                <input type="submit" value="Завершить">
+                <input type="button" value="Выйти">
+            </div>
+        </form>
+    </main>
+{% endblock content %}
+

@@ -1,0 +1,39 @@
+html {
+  min-height: 100vh;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+}
+body {
+  min-height: 100vh;
+  padding: 64px 100px;
+  background-color: lightgray;
+}
+main {
+  padding-top: 32px;
+  border-radius: 8px;
+  background-color: white;
+}
+table {
+  width: calc(100% - 64px);
+  margin: 0 32px 32px;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
+table td {
+  padding: 6px;
+  border: 1px solid #000;
+  text-align: center;
+}
+table th {
+  padding: 6px;
+  border: 1px solid #000;
+}
+.links {
+  padding: 32px;
+  border-radius: 0 0 8px 8px;
+  background-color: lightcyan;
+}
+.links a:visited {
+  color: blue;
+}
